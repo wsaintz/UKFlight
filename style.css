@@ -1,1 +1,29 @@
+// Placeholder for future interactivity
 
+// Handle download button
+document.addEventListener('DOMContentLoaded', function() {
+    const downloadBtn = document.getElementById('downloadBtn');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function() {
+            // Placeholder for download functionality
+            console.log('Download button clicked');
+            // When you have a download link, replace this with:
+            // window.location.href = 'path-to-download-file';
+        });
+    }
+
+    // Smooth scroll for navigation
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
